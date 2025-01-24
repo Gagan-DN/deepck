@@ -6,7 +6,7 @@
 
 ## Description
 
-This project aims to guide developers to train a deep learning-based deepfake detection model from scratch using [Python](https://www.python.org), [Keras](https://keras.io) and [TensorFlow](https://www.tensorflow.org). The proposed deepfake detector is based on the state-of-the-art EfficientNet structure with some customizations on the network layers, and the sample models provided were trained against a massive and comprehensive set of deepfake datasets. 
+This project aims to guide developers to train a deep learning-based deepfake detection model from scratch using [Python](https://www.python.org), [Keras](https://keras.io) and [TensorFlow](https://www.tensorflow.org). The proposed deepfake detector is based on the state-of-the-art EfficientNet structure with some customizations on the network layers, and the sample models provided were trained against a massive and comprehensive set of deepfake datasets.
 
 The proposed deepfake detection model is also served via a standard web-based interface at [DF-Detect](https://deepfake-detect.com/) to assist both the general Internet users and digital media providers in identifying potential deepfake contents. It is hoped that such approachable solution could remind Internet users to stay vigilant against fake contents, and ultimately help counter the emergence of deepfakes.
 
@@ -78,7 +78,7 @@ In case you do not have a good enough hardware to run MTCNN, or you want to achi
 python 01b-crop_faces_with_azure-vision-api.py
 ```
 
-> Replace the missing parts (*API Name* & *API Key*) before running
+> Replace the missing parts (_API Name_ & _API Key_) before running
 
 #### Step 2 - Balance and split datasets into various folders
 
@@ -86,7 +86,7 @@ python 01b-crop_faces_with_azure-vision-api.py
 python 02-prepare_fake_real_dataset.py
 ```
 
-As we observed that the number of fakes are much larger than the number of real faces (due to the fact that one real video is usually used for creating multiple deepfakes), we need to perform a down-sampling on the fake dataset based on the number of real crops, in order to tackle for possible class imbalance issues during the training phase. 
+As we observed that the number of fakes are much larger than the number of real faces (due to the fact that one real video is usually used for creating multiple deepfakes), we need to perform a down-sampling on the fake dataset based on the number of real crops, in order to tackle for possible class imbalance issues during the training phase.
 
 We also need to split the dataset into training, validation and testing sets (for example, in the ratio of 80:10:10) as the final step in the data preparation phase.
 
@@ -98,14 +98,14 @@ python 03-train_cnn.py
 
 EfficientNet is used as the backbone for the development work. Given that most of the deepfake videos are synthesized using a frame-by-frame approach, we have formulated the deepfake detection task as a binary classification problem such that it would be generally applicable to both video and image contents.
 
-In this code sample, we have adapted the EfficientNet B0 model in several ways: The top input layer is replaced by an input size of 128x128 with a depth of 3, and the last convolutional output from B0 is fed to a global max pooling layer. In addition, 2 additional fully connected layers have been introduced with ReLU activations, followed by a final output layer with Sigmoid activation to serve as a binary classifier. 
+In this code sample, we have adapted the EfficientNet B0 model in several ways: The top input layer is replaced by an input size of 128x128 with a depth of 3, and the last convolutional output from B0 is fed to a global max pooling layer. In addition, 2 additional fully connected layers have been introduced with ReLU activations, followed by a final output layer with Sigmoid activation to serve as a binary classifier.
 
 Thus, given a colored square image as the network input, we would expect the model to compute an output between 0 and 1 that indicates the probability of the input image being either deepfake (0) or pristine (1).
 
 ## Authors
 
-* **Aaron Chong** - *Initial work* - [aaronchong888](https://github.com/aaronchong888)
-* **Hugo Ng** - *Initial work* - [hugoclong](https://github.com/hugoclong)
+- **Aaron Chong** - _Initial work_ - [Gagan DN](https://github.com/Gagan-DN)
+- **Hugo Ng** - _Initial work_ - [Namannammu18](https://github.com/namannamu18)
 
 See also the list of [contributors](https://github.com/aaronchong888/DeepFake-Detect/contributors) who participated in this project.
 
