@@ -104,8 +104,8 @@ Thus, given a colored square image as the network input, we would expect the mod
 
 ## Authors
 
-- **Aaron Chong** - _Initial work_ - [Gagan DN](https://github.com/Gagan-DN)
-- **Hugo Ng** - _Initial work_ - [Namannammu18](https://github.com/namannamu18)
+- **Gagan D N** - _Initial work_ - [Gagan DN](https://github.com/Gagan-DN)
+- **Naman Bafna** - _Initial work_ - [Namannammu18](https://github.com/namannamu18)
 
 See also the list of [contributors](https://github.com/aaronchong888/DeepFake-Detect/contributors) who participated in this project.
 
